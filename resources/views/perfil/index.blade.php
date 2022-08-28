@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="md:flex md:justify-center">
-        <div class="md:w-1/2 bg-white shadew p-6">
+        <div class="md:w-1/2 bg-white shadew p-6 rounded shadow-xl">
             <form action="{{ route('perfil.store') }}" method="POST" enctype="multipart/form-data" class="mt-10 md:mt-0">
                 @csrf
                 

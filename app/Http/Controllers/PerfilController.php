@@ -58,6 +58,8 @@ class PerfilController extends Controller {
             if(Hash::check($request->old_password, auth()->user()->password)) {
                 $usuario->password = Hash::make($request->password);
                 $usuario->save();
+                return redirect()->route('posts.index', $usuario->username)->with('mensaje', 'Contraseña cambiada correctamente');
+                
             }
             else{
                 return back()->with('mensaje', 'La contraseña Actual no coincide');
@@ -65,6 +67,6 @@ class PerfilController extends Controller {
         }
         
         // Redireccionar
-        return redirect()->route('posts.index', $usuario->username)->with('mensaje', 'Contraseña cambiada correctamente'); // No auth()->user() ya que podría haberlo modificado
+        return redirect()->route('posts.index', $usuario->username); // No auth()->user() ya que podría haberlo modificado
     }
 }
