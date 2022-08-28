@@ -4,7 +4,7 @@
         @foreach ($posts as $post)
             <div>
                 <a href="{{ route('posts.show', ['post' => $post, 'user' => $post->user]) }}">
-                    <img src="{{ asset('uploads') . '/' . $post->imagen }}" alt="Imagen Post {{ $post->titulo }}">
+                    <img class="rounded" src="{{ asset('uploads') . '/' . $post->imagen }}" alt="Imagen Post {{ $post->titulo }}">
                 </a>
             </div>
         @endforeach

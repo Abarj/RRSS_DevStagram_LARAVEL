@@ -82,7 +82,7 @@
     </div>
 
     @if(session('mensaje'))
-        <div class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center uppercase font-bold w-1/2 m-auto">
+        <div class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center uppercase font-bold w-1/2 m-auto my-4">
             {{session('mensaje')}}
         </div>
     @endif
