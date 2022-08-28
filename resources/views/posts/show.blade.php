@@ -49,9 +49,9 @@
             </div>
 
             <div>
-                <p class="font-bold">
+                <a href="{{ route('posts.index', $post->user) }}" class="font-bold">
                     {{ $post->user->username}}
-                </p>
+                </a>
 
                 <p class="text-sm text-gray-500">
                     {{ $post->created_at->diffForHumans() }}
