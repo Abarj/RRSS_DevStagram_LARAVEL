@@ -49,7 +49,11 @@
             </div>
 
             <div>
+<<<<<<< HEAD
+                <a href="{{ route('posts.index', $post->user) }}" class="font-bold">
+=======
                 <a href="{{ route('posts.index', $post->user->username)}}" class="font-bold">
+>>>>>>> 29fa0124a2ec53d7c4a0f05af32d93f745140307
                     {{ $post->user->username}}
                 </a>
 
